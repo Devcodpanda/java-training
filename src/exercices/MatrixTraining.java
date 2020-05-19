@@ -121,7 +121,17 @@ public class MatrixTraining {
      * @return how many even numbers are in matrix, eg: 3
      */
     public int countEvens(int[][] matrix) {
-        int evenNumbers = matrix[0].length;
+        //    int evenNumbers = matrix[0].length;
+        //    return evenNumbers;
+
+        int evenNumbers = 0;
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                if (matrix[i][j] % 2 == 0) {
+                    evenNumbers++;
+                }
+            }
+        }
         return evenNumbers;
     }
 
